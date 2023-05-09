@@ -39,7 +39,7 @@
 }
 
 .botonHeader:hover {
-  color: #e8d018;
+  color: #f63131;
   transform: translateY(-6px);
 }
 
@@ -49,7 +49,7 @@ ion-icon {
   cursor: pointer;
 }
 ion-icon:hover{
-  color:#e8d018
+  color:#d30000;
 }
 
 @media only screen and (max-width: 920px) {

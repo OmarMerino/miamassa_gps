@@ -2,6 +2,7 @@
     width: 250px;
     height: 360px;
     background-color: white;
+    border: 1px solid grey;
     border-radius: 20px;
     padding: 5px;
     display: flex;

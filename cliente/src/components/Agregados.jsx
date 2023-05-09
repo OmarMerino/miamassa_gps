@@ -20,9 +20,9 @@ const Agregados = ({ titulo }, ref) => {
             })
             .catch(error => {
                 console.log(error)
-            });
+            })
 
-    }, []);
+    }, [])
 
     return (
         <div className='agregadosPantallaPrincipal'>
