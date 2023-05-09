@@ -7,9 +7,8 @@ const Agregados = ({ titulo }, ref) => {
     const [carnes, setCarnes] = useState([]);
     const [verduras, setVerduras] = useState([]);
 
-    const [data, setData] = React.useState(null);
     useEffect(() => {
-        axios.get('/getAgregados')
+        axios.get('http://localhost:8000/getAgregados')
             .then(response => {
                 const datos = response.data
                 const carnesFiltradas = datos.filter((dato) => dato.tipo === "Carnes")

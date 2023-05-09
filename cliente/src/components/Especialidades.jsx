@@ -8,7 +8,7 @@ import axios from 'axios'
 
 const Especialidades = ({ titulo }, ref) => {
 
-     const pizza = [
+/*      const pizza = [
         {
             nombre: "Mia Massa",
             ingredientes: "Salsa Pesto albahaca, Queso, Pollo o Carne, Variedad de pimientos, Choclo, Cebollín, Cilantro, Aceitunas y Orégano",
@@ -45,11 +45,11 @@ const Especialidades = ({ titulo }, ref) => {
             precio: "$17.000",
             img: fulltocino
         }
-    ] 
+    ]  */
 
-    /* const [pizza, setPizza] = useState([])
+    const [pizza, setPizza] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8000/getProductos')
+        axios.get('/getProductos')
             .then(response => {
                 setPizza(response.data);
             })
@@ -58,7 +58,7 @@ const Especialidades = ({ titulo }, ref) => {
             });
     }, []);
 
-    console.log(pizza) */
+    console.log(pizza) 
 
 
     return (
@@ -71,7 +71,7 @@ const Especialidades = ({ titulo }, ref) => {
             <div className='scrollTarjetasPizza'>
                 <div className='contenedorTarjetasPizza'>
                     {pizza.map((e, index) =>
-                        <TarjetaPizza key={index} nombre={e.nombre} ingredientes={e.ingredientes} precio={e.precio} img={e.img} />
+                        <TarjetaPizza key={index} nombre={e.nombre} ingredientes={e.ingredientes} precio={e.precio} img={`/${e.imagen}`} />
                     )}
                 </div>
             </div>

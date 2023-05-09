@@ -1,0 +1,51 @@
+.extrasTarjetaCuerpo{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid transparent;
+}
+
+.imagenExtras{
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+}
+
+.extrasTarjetaCuerpo h2{
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.nombreExtra{
+    color: #61210B;
+    font-size: 25px;
+}
+.precioExtra{
+    color: #088A08;
+    font-size: 27px;
+}
+
+@media only screen and (max-width: 920px) {
+    .extrasTarjetaCuerpo{
+        width: 100%;
+        height: 80px;
+        padding-left: 2px;
+        padding-right: 2px;
+
+    }    
+
+    .nombreExtra{
+        font-size: 23px;
+        text-align: center;
+    }
+    .precioExtra{
+        font-size: 27px;
+    }
+
+
+}

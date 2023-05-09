@@ -1,19 +1,45 @@
 .extrasPantallaPrincipal{
     margin-top: 20px;
     padding: 20px;
-    height: 450px;
-    background-color: #f0e9f3;
+    height: 350px;
+    background-color: #d8d8d8;
     border-radius: 20px;
     box-shadow: 
     0px 5px 6px 0px rgba(0, 0, 0, 0.34)
 }
 
-.extrasPantallaPrincipal h2{
+.tituloExtras{
     margin-top: 0;
     font-family: Verdana;
-    background-color: #8C3E30;
+    background-color: #61210B;
     display: inline;
     padding: 10px;
     border-radius: 20px;
     color: white;
+}
+
+.contenedorExtras{
+    margin-top: 20px;
+    height: 320px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media only screen and (max-width: 920px) {
+    .extrasPantallaPrincipal{
+        padding: 20px;
+        height: 570px;
+
+    }
+
+    .contenedorExtras{
+        margin-top: 20px;
+        height: 320px;
+        width: auto;
+        flex-wrap: nowrap;
+        gap: 5px;
+    }
 }

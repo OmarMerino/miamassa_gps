@@ -13,7 +13,6 @@ const NavBar = ({handleClickPromociones, handleClickContacto, handleClickEspecia
     <div className='divNavBar'>
       <img className='miamassalogo' src={miaMassaLogo} alt="" />
       <div className='header-info'>
-        <a href="https://wa.me/c/56963759468">Whatsapp</a>
         <p onClick={() => handleClickPromociones()} className='botonHeader'>Promociones</p>
         <p onClick={() => handleClickEspecialidades()} className='botonHeader'>Especialidades</p>
         <p onClick={() => handleClickAgregados()} className='botonHeader'>Agregados</p>

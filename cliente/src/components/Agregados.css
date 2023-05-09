@@ -2,7 +2,7 @@
     margin-top: 20px;
     padding: 20px;
     height: auto;
-    background-color: #f0e9f3;
+    background-color: #d8d8d8;
     border-radius: 20px;
     box-shadow:
         0px 5px 6px 0px rgba(0, 0, 0, 0.34)
@@ -11,7 +11,7 @@
 .tituloAgregados{
     margin-top: 0;
     font-family: Verdana;
-    background-color: #8C3E30;
+    background-color: #61210B;
     display: inline;
     padding: 10px;
     border-radius: 20px;
@@ -56,13 +56,13 @@
 }
 
 .agregadoNombre {
-    color: #8C3E30;
+    color: #61210B;
     font-weight: bold;
     font-size: 22px;
     
 }
 .agregadoPrecio {
-    color:#017910 ;
+    color:#088A08 ;
     font-weight: bold;
     font-size: 22px;
 }
