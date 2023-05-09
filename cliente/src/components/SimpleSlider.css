@@ -1,0 +1,41 @@
+.sliderDiv {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.slide {
+    background-color: transparent;
+    height: 408px;
+    width: 100%;
+}
+
+.slide h1 {
+    text-align: center;
+    display: block;
+}
+
+.slide img {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+@media only screen and (max-width: 920px) {
+    .sliderDiv {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .slide {
+        background-color: transparent;
+        height: 179px;
+        width: 99%;
+    }
+    .slide img {
+        width: auto;
+        height: 100%;
+        display: block;
+        margin: auto;
+    }
+}

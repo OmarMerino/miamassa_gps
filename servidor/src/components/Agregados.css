@@ -1,0 +1,113 @@
+.agregadosPantallaPrincipal {
+    margin-top: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: #f0e9f3;
+    border-radius: 20px;
+    box-shadow:
+        0px 5px 6px 0px rgba(0, 0, 0, 0.34)
+}
+
+.tituloAgregados{
+    margin-top: 0;
+    font-family: Verdana;
+    background-color: #8C3E30;
+    display: inline;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.contenedorAgregados {
+    height: 410px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.carnes{
+    width: 250px;
+    height: 320px;
+    padding-top: 10px;
+}
+.verduras{
+    width: 550px;
+    height: 400px;
+    padding-top: 10px;
+}
+
+.verdurasContainer{
+    width: 100%;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.mariscos{
+    width: 400px;
+    height: 300px;
+    padding-top: 10px;
+}
+
+.listadoAgregados{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+}
+
+.agregadoNombre {
+    color: #8C3E30;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+.agregadoPrecio {
+    color:#017910 ;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.tituloTipo{
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    font-weight: bold;
+    color: #d50004;
+    font-family: 'The Nautigal', cursive;
+}
+
+@media only screen and (max-width: 920px) {
+.contenedorAgregados{
+    flex-direction: column;
+    height: auto;
+}
+
+.carnes{
+    width: 100%;
+}
+.verduras{
+    width: 100%;
+    height: auto;
+}
+
+.verdurasContainer{
+    width: 100%;
+    height: auto;
+    display: inherit;
+    flex-direction: column;
+}
+.mariscos{
+    width: 100%;
+    height: auto;
+}
+
+.listadoAgregados{
+    padding: 0px;
+}
+.tituloTipo{
+    background-color: #93e69e;
+    border-radius: 15px;
+    text-align: center;
+}
+
+}

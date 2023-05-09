@@ -1,0 +1,89 @@
+.miamassalogo {
+  margin-top: 5px;
+  width: 220px;
+  height: auto;
+}
+
+.divNavBar {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to right, #951D1F 0%, #f5383b 100%);
+  border-radius: 20px;
+  display: flex;
+}
+
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: 100px;
+}
+
+.nombre {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-size: 38px;
+}
+
+.botonHeader {
+  font-family: 'The Nautigal', cursive;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+  cursor: pointer;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  transition: transform 0.8s ease;
+}
+
+.botonHeader:hover {
+  color: #e8d018;
+  transform: translateY(-6px);
+}
+
+ion-icon {
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+ion-icon:hover{
+  color:#e8d018
+}
+
+@media only screen and (max-width: 920px) {
+  .divNavBar {
+    height: 180px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-info {
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 0;
+    gap: 10px;
+    margin-left: 0;
+  }
+
+  .nombre {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .botonHeader {
+    font-size: 31px;
+  }
+
+  .botonHeader:hover {
+    color: white;
+    transform: none;
+  }
+
+  ion-icon:hover{
+    color:white
+  }
+
+}

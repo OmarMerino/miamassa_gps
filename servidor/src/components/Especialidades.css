@@ -1,0 +1,65 @@
+.especialidadesPantallaPrincipal {
+    margin-top: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: #f0e9f3;
+    border-radius: 20px;
+    box-shadow:
+        0px 5px 6px 0px rgba(0, 0, 0, 0.34)
+}
+
+.especialidadesPantallaPrincipal h2 {
+    font-family: Verdana;
+    background-color: #8C3E30;
+    display: inline;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.tituloYtamaño {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 5px;
+}
+
+.tituloYtamaño h3 {
+    color: white;
+    background-color: #017910;
+    padding: 3px;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.contenedorTarjetasPizza {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    column-gap: 120px;
+    row-gap: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+@media only screen and (max-width: 920px) {
+
+    .scrollTarjetasPizza {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .contenedorTarjetasPizza {
+        margin-top: 0;
+        padding: 9px;
+        display: flex;
+        width: max-content;
+        gap: 10px;
+    }
+
+
+}
