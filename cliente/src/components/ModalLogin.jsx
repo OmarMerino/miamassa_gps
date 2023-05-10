@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import "./ModalLogin.css"
-import { Link } from 'react-router-dom'
 
 
 const ModalLogin = ({ isOpen, cerrarComponente }) => {
@@ -17,9 +16,7 @@ const ModalLogin = ({ isOpen, cerrarComponente }) => {
                 <input type="text" placeholder='Usuario' />
                 <h2>Contraseña</h2>
                 <input type="text" placeholder='Contraseña' />
-                <Link to="/administrador">
-                    <button>Entrar</button>
-                </Link>
+                
             </div>
         </div>
     )

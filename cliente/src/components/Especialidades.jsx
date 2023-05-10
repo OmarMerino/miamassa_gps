@@ -1,9 +1,6 @@
 import React, { forwardRef,useEffect,useState } from 'react'
 import "./Especialidades.css"
 import TarjetaPizza from './TarjetaPizza'
-import fulltocino from "../image/pizzas/fulltocino.jpg"
-import miamassa from "../image/pizzas/miamassa.jpg"
-import serranogourmet from "../image/pizzas/serranogourmet.jpg"
 import axios from 'axios'
 
 const Especialidades = ({ titulo }, ref) => {

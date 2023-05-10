@@ -2,12 +2,65 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: aqua;
 }
 
 .crud{
     width: 80%;
     height: 600px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);
+}
+
+.tablaDeProductos{
+    width: 850px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0px 3px 5px rgb(0, 0, 0,0.32);
+}
+
+.coleccion{
+    width: 24%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right: 1px solid black;
     background-color: aqua;
+}
+
+.coleccion h1{
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 0;
+}
+.coleccion p{
+    font-size: 30px;
+    height: 50px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.documentos{
+    width: 76%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: darkkhaki;
+    overflow-y: scroll;
+}
+
+.documentos h1{
+    border-top-right-radius: 15px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    margin: 0;
+    padding: 0;
 }

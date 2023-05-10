@@ -2,8 +2,7 @@ import React from 'react'
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import FrontPage from './pages/FrontPage'
 import Administrador from './pages/Administrador';

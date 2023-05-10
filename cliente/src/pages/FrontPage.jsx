@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react'
+import { useRef} from 'react'
 import './FrontPage.css'
 import Especialidades from "../components/Especialidades"
 import NavBar from '../components/NavBar'
@@ -6,6 +6,7 @@ import Promociones from '../components/Promociones'
 import Agregados from '../components/Agregados'
 import Extras from '../components/Extras'
 import Contacto from '../components/Contacto'
+import { Link } from 'react-router-dom'
 
 
 function FrontPage() {
@@ -37,23 +38,26 @@ function FrontPage() {
   }
 
 
-  
+
 
   return (
     <div className='cuerpo'>
-      <NavBar 
-        handleClickPromociones={handleClickPromociones} 
-        handleClickEspecialidades={handleClickEspecialidades} 
+      <NavBar
+        handleClickPromociones={handleClickPromociones}
+        handleClickEspecialidades={handleClickEspecialidades}
         handleClickAgregados={handleClickAgregados}
-        handleClickExtras={handleClickExtras} 
+        handleClickExtras={handleClickExtras}
         handleClickContacto={handleClickContacto}
-        />
+      />
       <Promociones ref={refPromociones} titulo={"Promociones!"} />
       <Especialidades ref={refEspecialidades} titulo={"Especialidades"} />
       <Agregados ref={refAgregados} titulo={"Agregados"} />
-      <Extras ref={refExtras} titulo={"Extras"}/>
-      <Contacto ref={refContacto} titulo={"Contacto"}/>
+      <Extras ref={refExtras} titulo={"Extras"} />
+      <Contacto ref={refContacto} titulo={"Contacto"} />
       <button id='arriba' onClick={volverArriba}>UP</button>
+      <Link to="/administrador">
+        <button><ion-icon name="person" size="large"></ion-icon></button>
+      </Link>
       <div className="footer"><span className='footer'></span></div>
     </div>
   );

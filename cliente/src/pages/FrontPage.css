@@ -29,3 +29,12 @@
     height: 30px;
     background-color: transparent;
 }
+
+ion-icon {
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  ion-icon:hover{
+    color:#d30000;
+  }

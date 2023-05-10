@@ -60,6 +60,7 @@ controller.productos = async (req, res) => {
     }
 };
 
+
 //Proceso de actualizar producto, subir imagen.
 controller.putProducto = async (req,res)=>{
     let nombre = req.params.nombre;  
