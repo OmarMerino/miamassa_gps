@@ -6,17 +6,17 @@
 }
 
 .crud{
-    width: 100%;
+    width: 80%;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background-color: lightgrey;
+    background-color: rgb(248, 245, 245);
 }
 
 .tablaDeProductos{
-    width: 850px;
+    width: 1000px;
     height: 500px;
     border: 1px solid black;
     border-radius: 15px;
@@ -36,9 +36,14 @@
 .coleccion h1{
     text-align: center;
     border-bottom: 1px solid rgb(0, 0, 0);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 28px;
+    border-top-left-radius: 15px;
     margin: 0;
     padding: 0;
-    color: rgb(0, 0, 0);
+    background-color: #184453;
 }
 .coleccion p{
     font-size: 30px;

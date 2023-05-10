@@ -56,7 +56,7 @@ function FrontPage() {
       <Contacto ref={refContacto} titulo={"Contacto"} />
       <button id='arriba' onClick={volverArriba}>UP</button>
       <Link to="/administrador">
-        <button><ion-icon name="person" size="large"></ion-icon></button>
+        <ion-icon name="person" size="large"></ion-icon>
       </Link>
       <div className="footer"><span className='footer'></span></div>
     </div>

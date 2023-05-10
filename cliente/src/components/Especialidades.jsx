@@ -46,7 +46,7 @@ const Especialidades = ({ titulo }, ref) => {
 
     const [pizza, setPizza] = useState([])
     useEffect(() => {
-        axios.get('/getProductos')
+        axios.get('https://deploy-mia-massa-backend.vercel.app/getProductos')
             .then(response => {
                 setPizza(response.data);
             })
@@ -68,7 +68,7 @@ const Especialidades = ({ titulo }, ref) => {
             <div className='scrollTarjetasPizza'>
                 <div className='contenedorTarjetasPizza'>
                     {pizza.map((e, index) =>
-                        <TarjetaPizza key={index} nombre={e.nombre} ingredientes={e.ingredientes} precio={e.precio} img={`/${e.imagen}`} />
+                        <TarjetaPizza key={index} nombre={e.nombre} ingredientes={e.ingredientes} precio={e.precio} img={`https://deploy-mia-massa-backend.vercel.app/${e.imagen}`} />
                     )}
                 </div>
             </div>

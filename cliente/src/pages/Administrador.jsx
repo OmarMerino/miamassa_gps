@@ -11,11 +11,11 @@ const Administrador = () => {
   const [agregados, setAgregados] = useState([])
   const [buscadorAgregados, setBuscadorAgregados] = useState([])
   const [mapActual, setMapActual] = useState("especialidades")
-  const [buffer,setBuffer]=useState([])
+  const [buffer, setBuffer] = useState([])
 
   useEffect(() => {
 
-    axios.get('/getProductos')
+    axios.get('https://deploy-mia-massa-backend.vercel.app/getProductos')
       .then(response => {
         setEspecialidades(response.data)
         setBuscadorEspecialidades(response.data)
@@ -26,7 +26,7 @@ const Administrador = () => {
   }, [])
 
   useEffect(() => {
-    axios.get('/getAgregados')
+    axios.get('https://deploy-mia-massa-backend.vercel.app/getAgregados')
       .then(response => {
         setAgregados(response.data)
       })
@@ -65,11 +65,15 @@ const Administrador = () => {
             <p onClick={renderizarAgregados}>Agregados</p>
           </div>
           <div className="documentos">
-            <h1>Documentos</h1>
-            <div className='buscador'>
-              <ion-icon name="search-outline" color="white"></ion-icon>
-              <input type="text" onChange={handleOnChange} placeholder='Buscar por nombre' />
+            <div>
+              <h1>Documentos</h1>
+              <div className='buscador'>
+                <ion-icon name="search-outline" color="white"></ion-icon>
+                <input type="text" onChange={handleOnChange} placeholder='Buscar por nombre' />
+              </div>
             </div>
+            <AdministradorEspecialidades/>
+           
 
             {mapActual === "especialidades" && buscadorEspecialidades.map((e, index) => (
               <AdministradorTarjetaEspecialidades key={index} nombreDocumento={e.nombre} ingredientesDocumento={e.ingredientes} precioDocumento={e.precio} id={e.id} />
