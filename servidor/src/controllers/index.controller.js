@@ -6,6 +6,67 @@ const { db, admin } = require('../firebase');
 //Añadir las funciones al Controlador para que se puedan invocar en Rutas
 const controller = {}
 
+//edit productos
+controller.editAgregado = async (req, res) => {
+  try {
+    const body=req.body
+    const id = req.params.id;
+    console.log(body)
+    console.log(id)
+    // Creamos una referencia a la colección de productos en Firestore
+    const productosRef = admin.firestore().collection('agregados');
+    
+    // Creamos una referencia al documento del producto que deseamos eliminar
+    const productoRef = productosRef.doc(id);
+
+    // Obtenemos el documento actual
+    const doc = await productoRef.get();
+
+    // Si el documento no existe, retornamos un error 404
+    if (!doc.exists) {
+      res.status(404).send('No se encontró el agregado');
+    } else {
+      
+      await productoRef.update(body);
+      res.send('agregadado actualizado');
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Ocurrió un error al acutalizar el agregado');
+  }
+};
+//edit productos
+controller.editProductos = async (req, res) => {
+  try {
+    const body=req.body
+    const id = req.params.id;
+    console.log(body)
+    console.log(id)
+    // Creamos una referencia a la colección de productos en Firestore
+    const productosRef = admin.firestore().collection('productos');
+    
+    // Creamos una referencia al documento del producto que deseamos eliminar
+    const productoRef = productosRef.doc(id);
+
+    // Obtenemos el documento actual
+    const doc = await productoRef.get();
+
+    // Si el documento no existe, retornamos un error 404
+    if (!doc.exists) {
+      res.status(404).send('No se encontró el producto');
+    } else {
+      
+      await productoRef.update(body);
+      res.send('Producto actualizado');
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Ocurrió un error al acutalizar el producto');
+  }
+};
+
+
+
 
 //Get Productos.
 controller.getProductos = async (req, res) => {

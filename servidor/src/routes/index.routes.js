@@ -11,7 +11,7 @@ router.get('/getProductos', (req, res) => {
 
 //añadir producto 
 router.post('/addProducto', (req, res) => {
-    controller.addProductos(req, res);
+    controller.addProducto(req, res);
 });
 
 
@@ -34,7 +34,7 @@ router.get('/getAgregados', (req, res) => {
 
 //añadir producto 
 router.post('/addAgregado', (req, res) => {
-    controller.addAgregados(req, res);
+    controller.addAgregado(req, res);
 });
 
 
@@ -46,8 +46,20 @@ router.delete('/agregados/:id', (req, res) => {
 
 //subir imagen indicando el id del producto y pasando una imagen 
 router.put('/upload/agregados/:nombre', (req, res) => {
-    controller.putProducto(req, res);
+    console.log("ruta")
+    controller.putAgregados(req, res);
 });
+
+
+router.put('/edit/agregado/:id', (req, res) => {
+    console.log("ruta")
+    controller.editAgregado(req, res);
+});
+router.put('/edit/producto/:id', (req, res) => {
+    console.log("ruta")
+    controller.editProductos(req, res);
+});
+
 
 
 //Export para que se puedan utilizar en cualquier archivo las Rutas
