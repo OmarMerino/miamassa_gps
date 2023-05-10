@@ -2,17 +2,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    background-color: transparent;
 }
 
 .crud{
-    width: 80%;
+    width: 100%;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background-color: rgb(235, 235, 235);
+    background-color: lightgrey;
 }
 
 .tablaDeProductos{
@@ -30,14 +30,15 @@
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right: 1px solid black;
-    background-color: aqua;
+    background-color:#AFEEEE;
 }
 
 .coleccion h1{
     text-align: center;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(0, 0, 0);
     margin: 0;
     padding: 0;
+    color: rgb(0, 0, 0);
 }
 .coleccion p{
     font-size: 30px;
@@ -53,14 +54,22 @@
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: darkkhaki;
+    background-color: #184453;
     overflow-y: scroll;
 }
 
 .documentos h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 28px;
     border-top-right-radius: 15px;
     text-align: center;
-    border-bottom: 1px solid black;
     margin: 0;
     padding: 0;
+}
+
+.buscador{
+    display: flex;
+    justify-content: center;
 }
