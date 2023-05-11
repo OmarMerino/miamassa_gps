@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./AdministradorTarjetaEspecialidades.css"
 import axios from 'axios'
-import url from '../Link'
+
 
 const AdministradorTarjetaEspecialidades = ({ nombreDocumento, ingredientesDocumento, precioDocumento, id }) => {
 

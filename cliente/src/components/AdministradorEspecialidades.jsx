@@ -16,11 +16,9 @@ const AdministradorEspecialidades = () => {
                     method: 'post',
                     url: `https://deploy-mia-massa-backend.vercel.app/addProducto`,
                     data: {
-                        id: uuid(),
                         nombre: nombred,
                         ingredientes: ingredientesd,
                         precio: preciod,
-                        disponibilidad: true,
                         imagen: `/${nombred}`
                     }
                 });

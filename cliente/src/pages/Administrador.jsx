@@ -4,6 +4,7 @@ import AdministradorTarjetaEspecialidades from '../components/AdministradorTarje
 import AdministradorTarjetaAgregados from '../components/AdministradorTarjetaAgregados'
 import axios from 'axios'
 import AdministradorEspecialidades from '../components/AdministradorEspecialidades'
+import { Link } from 'react-router-dom'
 
 const Administrador = () => {
   const [especialidades, setEspecialidades] = useState([])
@@ -84,6 +85,9 @@ const Administrador = () => {
           </div>
         </div>
       </div>
+      <Link to="/">
+        <button style={{color:"black"}}>VOLVER</button>
+      </Link>
     </div>
   )
 }
