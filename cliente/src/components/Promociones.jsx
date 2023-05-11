@@ -5,7 +5,7 @@ import SimpleSlider from './SimpleSlider'
 const Promociones = ({ titulo }, ref) => {
   return (
     <div className='promocionesPantallaPrincipal'>
-      <h2 ref={ref}>{titulo}</h2>
+      <h2 ref={ref} className='tituloPromociones'>{titulo}</h2>
       <div style={{display:"flex",justifyContent:"center"}}>
         <SimpleSlider />
       </div>
