@@ -22,8 +22,9 @@ const AdministradorEspecialidades = () => {
                         imagen: `/${nombred}`
                     }
                 });
-
-                console.log(data);
+                setIngredientesd("")
+                setNombred("")
+                setPreciod("") 
             } catch (err) {
                 if (err.response.status === 404) {
                     console.log('Resource could not be found!');
