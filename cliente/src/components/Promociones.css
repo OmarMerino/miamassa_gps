@@ -8,7 +8,7 @@
     0px 5px 6px 0px rgba(0, 0, 0, 0.34)
 }
 
-.promocionesPantallaPrincipal h2{
+.tituloPromociones{
     margin-top: 0;
     font-family: Verdana;
     background-color: #d30000;
@@ -16,4 +16,11 @@
     padding: 10px;
     border-radius: 20px;
     color: white;
+}
+
+@media only screen and (max-width: 920px) {
+    .tituloPromociones{
+        margin-bottom: 150px;
+    }
+
 }

@@ -78,6 +78,7 @@
 
 @media only screen and (max-width: 920px) {
 .contenedorAgregados{
+    margin-top: 5px;
     flex-direction: column;
     height: auto;
 }
@@ -104,8 +105,10 @@
 .listadoAgregados{
     padding: 0px;
 }
+
+
 .tituloTipo{
-    background-color: #93e69e;
+    background-color: #5bfc5070;
     border-radius: 15px;
     text-align: center;
 }

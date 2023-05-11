@@ -1,65 +1,83 @@
-.cuerpoAdministrador{
+.cuerpoAdministrador {
     width: 100%;
     display: flex;
     justify-content: center;
+    border-radius: 15px;
     background-color: transparent;
-}
-
-.crud{
-    width: 100%;
+    color:white;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.32);
+  }
+  
+  .crud {
+    width: 80%;
     height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
-    background-color: lightgrey;
-}
-
-.tablaDeProductos{
-    width: 850px;
+    background-color: transparent;
+  }
+  
+  .tablaDeProductos {
+    width: 1000px;
     height: 500px;
     border: 1px solid black;
     border-radius: 15px;
     display: flex;
-    box-shadow: 0px 3px 5px rgb(0, 0, 0,0.32);
-}
-
-.coleccion{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.32);
+  }
+  
+  .coleccion {
     width: 24%;
     height: 100%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-right: 1px solid black;
-    background-color:#AFEEEE;
-}
-
-.coleccion h1{
+    background-color: #dedede;
+  }
+  
+  .coleccion h1 {
     text-align: center;
     border-bottom: 1px solid rgb(0, 0, 0);
+    color: #629daa;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 28px;
+    border-top-left-radius: 15px;
     margin: 0;
     padding: 0;
-    color: rgb(0, 0, 0);
-}
-.coleccion p{
+    background-color: #184453;
+    transition: color 0.3s ease-in-out;
+  }
+  
+ 
+  
+  .coleccion p {
     font-size: 30px;
     height: 50px;
     text-align: center;
     border-bottom: 1px solid black;
     cursor: pointer;
     padding-top: 5px;
-}
-
-.documentos{
+    color: #000000;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .coleccion p:hover {
+    color: #ffffff;
+  }
+  
+  .documentos {
     width: 76%;
     height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: #184453;
     overflow-y: scroll;
-}
-
-.documentos h1{
-    color: white;
+  }
+  
+  .documentos h1 {
+    color: #ffffff;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     font-size: 28px;
@@ -67,9 +85,143 @@
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-.buscador{
+  }
+  
+  .buscador {
     display: flex;
     justify-content: center;
-}
+  }
+  
+  .buscador input {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1F2937;
+    color: #ffffff;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .buscador input:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1F2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .AdministradorTarjetaEspecialidades,
+  .AdministradorTarjetaAgregados {
+    background-color: #424242;
+    color: #ffffff;
+  }
+  
+  .AdministradorTarjetaEspecialidades:hover,
+  .AdministradorTarjetaAgregados:hover {
+    background-color: #525252;
+  }
+  
+  .AdministradorTarjetaEspecialidades button,
+  .AdministradorTarjetaAgregados button {
+    background-color: #FCD34D;
+    color: #1F2937;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .AdministradorTarjetaEspecialidades button:hover,
+  .AdministradorTarjetaAgregados button:hover {
+    background-color: #CBD5E0;
+    color: #1F2937;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1F2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .administrador-titulo {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+  }
+  
+  .buscador-label {
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .gris-azulado-claro {
+    color: #CBD5E0;
+  }
+  
+  .gris-azulado-medio {
+    color: #8B9EAF;
+  }
+  
+  .gris-azulado-oscuro {
+    color: #64748B;
+  }
+  
+  .gris-azulado-muy-oscuro {
+    color: #4C566A;
+  }
+  
+  .gris-azulado-sombreado {
+    color: #374151;
+  }
+  
+  .gris-azulado-borde {
+    border: 1px solid #4B5563;
+  }
+  
+  /* Hover en el buscador */
+  .buscador input:hover,
+  .buscador ion-icon:hover {
+    
+    color: #000000;
+  }
+  
+  /* Scrollbar en tema oscuro */
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #1F2937;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #4B5563;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+  }
+  
+  /* Hover en palabras Especialidades y Agregados */
+  .AdministradorTarjetaEspecialidades,
+  .AdministradorTarjetaAgregados {
+    background-color: #424242;
+    color: #ffffff;
+  }
+  
+  .AdministradorTarjetaEspecialidades:hover,
+  .AdministradorTarjetaAgregados:hover {
+    background-color: #000000;
+  }

@@ -4,6 +4,7 @@ import AdministradorTarjetaEspecialidades from '../components/AdministradorTarje
 import AdministradorTarjetaAgregados from '../components/AdministradorTarjetaAgregados'
 import axios from 'axios'
 import AdministradorEspecialidades from '../components/AdministradorEspecialidades'
+import { Link } from 'react-router-dom'
 
 const Administrador = () => {
   const [especialidades, setEspecialidades] = useState([])
@@ -11,11 +12,23 @@ const Administrador = () => {
   const [agregados, setAgregados] = useState([])
   const [buscadorAgregados, setBuscadorAgregados] = useState([])
   const [mapActual, setMapActual] = useState("especialidades")
-  const [buffer,setBuffer]=useState([])
 
   useEffect(() => {
+    fetchEspecialidades()
+    fetchAgregados()
 
-    axios.get('/getProductos')
+    // Realizar una llamada al servidor cada 5 segundos
+    const interval = setInterval(() => {
+      fetchEspecialidades()
+      fetchAgregados()
+    }, 3000)
+
+    // Limpiar el intervalo cuando el componente se desmonte
+    return () => clearInterval(interval)
+  }, [])
+
+  const fetchEspecialidades = () => {
+    axios.get('https://deploy-mia-massa-backend.vercel.app/getProductos')
       .then(response => {
         setEspecialidades(response.data)
         setBuscadorEspecialidades(response.data)
@@ -23,17 +36,17 @@ const Administrador = () => {
       .catch(error => {
         console.log(error)
       })
-  }, [])
+  }
 
-  useEffect(() => {
-    axios.get('/getAgregados')
+  const fetchAgregados = () => {
+    axios.get('https://deploy-mia-massa-backend.vercel.app/getAgregados')
       .then(response => {
         setAgregados(response.data)
       })
       .catch(error => {
         console.log(error)
       })
-  }, [])
+  }
 
   const renderizarEspecialidades = () => {
     setMapActual("especialidades")
@@ -48,11 +61,9 @@ const Administrador = () => {
   }
 
   const buscarEspecialidadNombre = (palabraBuscada) => {
-    const ruti = especialidades.filter(productos => (productos.nombre).toLowerCase().includes(palabraBuscada))
+    const ruti = especialidades.filter(productos => productos.nombre.toLowerCase().includes(palabraBuscada))
     setBuscadorEspecialidades(ruti)
   }
-
-
 
   return (
     <div className='cuerpoAdministrador'>
@@ -65,23 +76,28 @@ const Administrador = () => {
             <p onClick={renderizarAgregados}>Agregados</p>
           </div>
           <div className="documentos">
-            <h1>Documentos</h1>
-            <div className='buscador'>
-              <ion-icon name="search-outline" color="white"></ion-icon>
-              <input type="text" onChange={handleOnChange} placeholder='Buscar por nombre' />
-            </div>
+            <div>
+              <h1>Documentos</h1>
+              <div className='buscador'>
+                <ion-icon name="search-outline" color="white"></ion-icon>
+                <input type="text" onChange={handleOnChange} placeholder='Buscar por nombre' />
+              </div>
+             </div>
+          <AdministradorEspecialidades/>
 
-            {mapActual === "especialidades" && buscadorEspecialidades.map((e, index) => (
-              <AdministradorTarjetaEspecialidades key={index} nombreDocumento={e.nombre} ingredientesDocumento={e.ingredientes} precioDocumento={e.precio} id={e.id} />
-            ))}
-            {mapActual === "agregados" && agregados.map((e, index) => (
-              <AdministradorTarjetaAgregados key={index} nombreAgregado={e.nombre} tipoAgregado={e.tipo} precioAgregado={e.precio} id={e.id} />
-            ))}
-          </div>
-        </div>
+        {mapActual === "especialidades" && buscadorEspecialidades.map((e, index) => (
+          <AdministradorTarjetaEspecialidades key={index} nombreDocumento={e.nombre} ingredientesDocumento={e.ingredientes} precioDocumento={e.precio} id={e.id} />
+        ))}
+        {mapActual === "agregados" && agregados.map((e, index) => (
+          <AdministradorTarjetaAgregados key={index} nombreAgregado={e.nombre} tipoAgregado={e.tipo} precioAgregado={e.precio} id={e.id} />
+        ))}
       </div>
     </div>
-  )
+  </div>
+  <Link to="/">
+    <button style={{ color: "black" }}>VOLVER</button>
+  </Link>
+</div>)
 }
 
 export default Administrador

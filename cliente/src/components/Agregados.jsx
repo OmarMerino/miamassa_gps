@@ -2,13 +2,14 @@ import React, { forwardRef, useEffect, useState } from 'react'
 import "./Agregados.css"
 import axios from 'axios';
 
+
 const Agregados = ({ titulo }, ref) => {
     const [mariscos, setMariscos] = useState([])
     const [carnes, setCarnes] = useState([]);
     const [verduras, setVerduras] = useState([]);
 
     useEffect(() => {
-        axios.get('getAgregados')
+        axios.get("https://deploy-mia-massa-backend.vercel.app/getAgregados")
             .then(response => {
                 const datos = response.data
                 const carnesFiltradas = datos.filter((dato) => dato.tipo === "Carnes")
