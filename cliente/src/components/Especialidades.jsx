@@ -64,7 +64,6 @@ const Especialidades = ({ titulo }, ref) => {
                 <h2 ref={ref}>{titulo}</h2>
                 <h3 >38cm</h3>
             </div>
-            .
             <div className='scrollTarjetasPizza'>
                 <div className='contenedorTarjetasPizza'>
                     {pizza.map((e, index) =>

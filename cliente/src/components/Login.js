@@ -49,14 +49,15 @@ export function Login() {
 
   return (
     <div style={{width:"100%",height:"98vh",backgroundColor:"lightgray",display:"flex",justifyContent:"center",alignItems:"center" }}>
-      <div className="w-full max-w-xs m-auto">
+      <div className="w-full max-w-xs m-auto" >
         {error && <Alert message={error} />}
 
         <form
           onSubmit={handleSubmit}
           className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          style={{paddingRight:"55px"}}
         >
-          <div className="mb-4">
+          <div className="mb-4" >
             <label
               htmlFor="email"
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -72,7 +73,7 @@ export function Login() {
               placeholder="youremail@company.tld"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4" >
             <label
               htmlFor="password"
               className="block text-gray-700 text-sm font-bold mb-2"

@@ -1,7 +1,7 @@
 .contactoPantallaPrincipal{
     margin-top: 20px;
     padding: 20px;
-    height: 350px;
+    height: auto;
     background-color: #f9f8f8;
     border-radius: 20px;
     box-shadow: 
@@ -16,4 +16,27 @@
     padding: 10px;
     border-radius: 20px;
     color: white;
+}
+.imagenMapa{
+    margin-top: 10px;
+    border: 1px dotted grey;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.14);
+    display: block;
+    margin: 0 auto;
+}
+.mapa{}
+
+@media only screen and (max-width: 920px) {
+.iconosContacto{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.imagenMapa{
+    width: 100%;
+    height: auto;
+}
+
 }

@@ -67,8 +67,11 @@ const Administrador = () => {
 
   return (
     <div className='cuerpoAdministrador'>
+      <Link to="/">
+        <button className='botonVolver'>VOLVER</button>
+      </Link>
       <div className="crud">
-        <h1>Administrador</h1>
+        <h1 className='crudAdministrador'>Administrador</h1>
         <div className="tablaDeProductos">
           <div className="coleccion">
             <h1>Colecciones</h1>
@@ -82,22 +85,19 @@ const Administrador = () => {
                 <ion-icon name="search-outline" color="white"></ion-icon>
                 <input type="text" onChange={handleOnChange} placeholder='Buscar por nombre' />
               </div>
-             </div>
-          <AdministradorEspecialidades/>
+            </div>
+            <AdministradorEspecialidades />
 
-        {mapActual === "especialidades" && buscadorEspecialidades.map((e, index) => (
-          <AdministradorTarjetaEspecialidades key={index} nombreDocumento={e.nombre} ingredientesDocumento={e.ingredientes} precioDocumento={e.precio} id={e.id} />
-        ))}
-        {mapActual === "agregados" && agregados.map((e, index) => (
-          <AdministradorTarjetaAgregados key={index} nombreAgregado={e.nombre} tipoAgregado={e.tipo} precioAgregado={e.precio} id={e.id} />
-        ))}
+            {mapActual === "especialidades" && buscadorEspecialidades.map((e, index) => (
+              <AdministradorTarjetaEspecialidades key={index} nombreDocumento={e.nombre} ingredientesDocumento={e.ingredientes} precioDocumento={e.precio} id={e.id} />
+            ))}
+            {mapActual === "agregados" && agregados.map((e, index) => (
+              <AdministradorTarjetaAgregados key={index} nombreAgregado={e.nombre} tipoAgregado={e.tipo} precioAgregado={e.precio} id={e.id} />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <Link to="/">
-    <button style={{ color: "black" }}>VOLVER</button>
-  </Link>
-</div>)
+    </div>)
 }
 
 export default Administrador
