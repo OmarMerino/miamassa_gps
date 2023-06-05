@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Alert } from "./Alert";
-
+import  "./login.css"
 
 export function Login() {
   const [user, setUser] = useState({
@@ -48,7 +48,7 @@ export function Login() {
   };
 
   return (
-    <div style={{width:"100%",height:"98vh",backgroundColor:"lightgray",display:"flex",justifyContent:"center",alignItems:"center" }}>
+    <div class="contenedor">
       <div className="w-full max-w-xs m-auto" >
         {error && <Alert message={error} />}
 
@@ -92,7 +92,7 @@ export function Login() {
 
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="iniciarSesion"
               type="submit"
             >
               Sign In

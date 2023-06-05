@@ -27,7 +27,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<ProtectedRoute><Register/></ProtectedRoute>} />
         </Routes>
       </AuthProvider>
     </Router>
