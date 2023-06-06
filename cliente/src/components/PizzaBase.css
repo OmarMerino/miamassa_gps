@@ -1,0 +1,92 @@
+.pizzaBasePantallaPrincipal {
+    margin-top: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: #f9f8f8;
+    border-radius: 20px;
+    box-shadow:
+        0px 5px 6px 0px rgba(0, 0, 0, 0.34)
+}
+
+.pizzaBasePantallaPrincipal h2 {
+    font-family: Verdana;
+    background-color: #d30000;
+    display: inline;
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.containerPizzaBase{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tarjetaPizzaBase{
+    width: 210px;
+    height: 310px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;    
+    gap: 5px;
+    position: relative;
+    box-shadow: 0px 1px 4px rgb(0, 0, 0,0.32);
+}
+
+.tarjetaPizzaBase img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.tarjetaPizzaBase h3, h4{
+    margin: 0;
+}
+
+.tarjetaPizzaBase h3{
+    font-family: Verdana;
+    color: #017910;
+    font-weight: bold;
+}
+
+
+.figurePizzaBase {
+    width: 100px;
+    height: 0px;
+    bottom: 5%;
+    position: absolute;
+    border-top: 15px solid #951D1F;
+    border-bottom: 15px solid #951D1F;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+.figurePizzaBase h4{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: -14px;
+    left: 18%;
+}
+
+@media only screen and (max-width: 920px) {
+
+    .scrollTarjetasPizzaBase {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .containerPizzaBase {
+        margin-top: 15px;
+        padding: 9px;
+        display: flex;
+        width: max-content;
+        gap: 10px;
+    }
+
+}

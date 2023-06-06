@@ -16,8 +16,8 @@
 .header-info {
   display: flex;
   align-items: center;
-  gap: 25px;
-  margin-left: 100px;
+  gap: 32px;
+  margin-left: 60px;
 }
 
 .nombre {

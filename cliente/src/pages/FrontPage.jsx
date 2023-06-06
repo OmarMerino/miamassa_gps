@@ -6,6 +6,7 @@ import Promociones from '../components/Promociones'
 import Agregados from '../components/Agregados'
 import Extras from '../components/Extras'
 import Contacto from '../components/Contacto'
+import PizzaBase from '../components/PizzaBase'
 import { Link } from 'react-router-dom'
 
 
@@ -14,15 +15,19 @@ function FrontPage() {
 
   const refPromociones = useRef(null);
   const refEspecialidades = useRef(null);
+  const refPizzaBase = useRef(null);
   const refContacto = useRef(null);
   const refAgregados = useRef(null);
   const refExtras = useRef(null);
 
   const handleClickPromociones = () => {
-    refPromociones.current?.scrollIntoView({ block: 'start', blockOffset: 10, behavior: 'smooth' });
+    refPromociones.current?.scrollIntoView({ behavior: 'smooth' });
   }
   const handleClickEspecialidades = () => {
     refEspecialidades.current?.scrollIntoView({ behavior: 'smooth' });
+  }
+  const handleClickPizzaBase = () => {
+    refPizzaBase.current?.scrollIntoView({ behavior: 'smooth' });
   }
   const handleClickAgregados = () => {
     refAgregados.current?.scrollIntoView({ behavior: 'smooth' });
@@ -45,12 +50,14 @@ function FrontPage() {
       <NavBar
         handleClickPromociones={handleClickPromociones}
         handleClickEspecialidades={handleClickEspecialidades}
+        handleClickPizzaBase={handleClickPizzaBase}
         handleClickAgregados={handleClickAgregados}
         handleClickExtras={handleClickExtras}
         handleClickContacto={handleClickContacto}
       />
       <Promociones ref={refPromociones} titulo={"Promociones!"} />
       <Especialidades ref={refEspecialidades} titulo={"Especialidades"} />
+      <PizzaBase ref={refPizzaBase} titulo={"Pizza Base"}/>
       <Agregados ref={refAgregados} titulo={"Agregados"} />
       <Extras ref={refExtras} titulo={"Extras"} />
       <Contacto ref={refContacto} titulo={"Contacto"} />

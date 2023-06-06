@@ -1,7 +1,7 @@
 import "./NavBar.css"
 import miaMassaLogo from "../image/miamassalogo.jpg"
 
-const NavBar = ({handleClickPromociones, handleClickContacto, handleClickEspecialidades, handleClickExtras,handleClickAgregados}) => {
+const NavBar = ({handleClickPromociones, handleClickContacto, handleClickEspecialidades, handleClickExtras,handleClickAgregados,handleClickPizzaBase}) => {
 
   return (
     <div className='divNavBar'>
@@ -9,6 +9,7 @@ const NavBar = ({handleClickPromociones, handleClickContacto, handleClickEspecia
       <div className='header-info'>
         <p onClick={() => handleClickPromociones()} className='botonHeader'>Promociones</p>
         <p onClick={() => handleClickEspecialidades()} className='botonHeader'>Especialidades</p>
+        <p onClick={() => handleClickPizzaBase()} className='botonHeader'>PizzaBase</p>
         <p onClick={() => handleClickAgregados()} className='botonHeader'>Agregados</p>
         <p onClick={() => handleClickExtras()} className='botonHeader'>Extras</p>
         <p onClick={() => handleClickContacto()} className='botonHeader'>Contacto</p>
