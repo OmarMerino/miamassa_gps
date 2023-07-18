@@ -1,4 +1,4 @@
-import { useRef} from 'react'
+import { useRef, useState } from 'react'
 import './FrontPage.css'
 import Especialidades from "../components/Especialidades"
 import NavBar from '../components/NavBar'
@@ -8,6 +8,7 @@ import Extras from '../components/Extras'
 import Contacto from '../components/Contacto'
 import PizzaBase from '../components/PizzaBase'
 import { Link } from 'react-router-dom'
+import Sugerencia from '../components/Sugerencia'
 
 
 function FrontPage() {
@@ -42,7 +43,11 @@ function FrontPage() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
+  const [abierto, setAbierto] = useState(false)
 
+  const abrirCerrarModal = () => {
+    setAbierto(!abierto)
+  }
 
 
   return (
@@ -57,14 +62,17 @@ function FrontPage() {
       />
       <Promociones ref={refPromociones} titulo={"Promociones!"} />
       <Especialidades ref={refEspecialidades} titulo={"Especialidades"} />
-      <PizzaBase ref={refPizzaBase} titulo={"Pizza Base"}/>
+      <PizzaBase ref={refPizzaBase} titulo={"Pizza Base"} />
       <Agregados ref={refAgregados} titulo={"Agregados"} />
       <Extras ref={refExtras} titulo={"Extras"} />
       <Contacto ref={refContacto} titulo={"Contacto"} />
       <button id='arriba' onClick={volverArriba}>UP</button>
+      <p className='sugerencia' onClick={abrirCerrarModal}>Deja tu sugerencia o reclamo aquí</p>
       <Link to="/administrador">
         <ion-icon name="person" size="large"></ion-icon>
       </Link>
+      <Sugerencia isOpen={abierto} cerrar={abrirCerrarModal}/>
+
       <div className="footer"><span className='footer'></span></div>
     </div>
   );

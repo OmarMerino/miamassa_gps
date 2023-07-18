@@ -1,0 +1,93 @@
+.sugerenciaModalFondo{
+    width: 100%;
+    height: 100vh;
+    background-color: #24242421;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sugerenciaModal{
+    background-color: #000000;
+    margin-top: 20px;
+    width: 350px;
+    height: 580px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.09);
+}
+
+.sugerenciaModalFondoCerrado{
+    display: none;
+}
+
+.sugerenciaModal h1, .sugerenciaModal h3{
+    margin: 0;
+    color: white;
+    background-color: #000000;
+}
+.sugerenciaModal h1{
+    margin-top: 20px;
+    font-family: 'The Nautigal', cursive;
+    font-size: 60px;
+}
+.sugerenciaModal h3{
+    margin-bottom: 20px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}
+
+.formulario input{
+    width: 300px;
+}
+
+.formulario p{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+#reclamo{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.sugerenciaBotones{
+    display: flex;
+    gap: 100px;
+    margin-top: 60px;
+
+}
+
+.enviarFormulario{
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: fantasy;
+    margin-right: auto;
+}
+
+.cerrarFormulario{
+    width: 100px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: white;
+    font-family: fantasy;
+    
+}
