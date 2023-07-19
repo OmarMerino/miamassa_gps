@@ -14,7 +14,7 @@ const Contacto = ({ titulo }, ref) => {
       <div style={{ marginTop: "30px" }}>
         <h4>Realiza tu pedido en cualquiera de nuestras redes</h4>
         <div className='iconosContacto'>
-          <a href="https://wa.me/c/56963759468"> <img src={whatsapp} alt="" /></a>
+          <a href="https://api.whatsapp.com/send?phone=56963759468&text=Hola, quisiera realizar un Pedido."> <img src={whatsapp} alt="" /></a>
           <a href="https://www.facebook.com/miamassapizzeria"> <img src={facebook} alt="" /></a>
           <a href="https://www.instagram.com/mia_massa/"> <img src={instagram} alt="" /></a>
         </div>
