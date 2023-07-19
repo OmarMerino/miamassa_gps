@@ -16,9 +16,6 @@ const Especialidades = ({ titulo }, ref) => {
             });
     }, []);
 
-    console.log(pizza) 
-
-
     return (
         <div className='especialidadesPantallaPrincipal'>
             <div className='tituloYtamaño'>

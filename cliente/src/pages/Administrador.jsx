@@ -5,12 +5,12 @@ import AdministradorTarjetaAgregados from '../components/AdministradorTarjetaAgr
 import axios from 'axios'
 import AdministradorEspecialidades from '../components/AdministradorEspecialidades'
 import { Link } from 'react-router-dom'
+import AdministradorTarjetaReclamos from '../components/AdministradorTarjetaReclamos'
 
 const Administrador = () => {
   const [especialidades, setEspecialidades] = useState([])
   const [buscadorEspecialidades, setBuscadorEspecialidades] = useState([])
   const [agregados, setAgregados] = useState([])
-  const [buscadorAgregados, setBuscadorAgregados] = useState([])
   const [mapActual, setMapActual] = useState("especialidades")
 
   useEffect(() => {
@@ -56,6 +56,10 @@ const Administrador = () => {
     setMapActual("agregados")
   }
 
+  const renderizarReclamos = () => {
+    setMapActual("reclamos")
+  }
+
   const handleOnChange = (e) => {
     buscarEspecialidadNombre(e.target.value.toLowerCase())
   }
@@ -77,6 +81,7 @@ const Administrador = () => {
             <h1>Colecciones</h1>
             <p onClick={renderizarEspecialidades}>Especialidades</p>
             <p onClick={renderizarAgregados}>Agregados</p>
+            <p onClick={renderizarReclamos}>Reclamos</p>
           </div>
           <div className="documentos">
             <div>
@@ -94,6 +99,10 @@ const Administrador = () => {
             {mapActual === "agregados" && agregados.map((e, index) => (
               <AdministradorTarjetaAgregados key={index} nombreAgregado={e.nombre} tipoAgregado={e.tipo} precioAgregado={e.precio} id={e.id} />
             ))}
+
+            {mapActual === "reclamos" && <AdministradorTarjetaReclamos />
+            }
+
           </div>
         </div>
       </div>
